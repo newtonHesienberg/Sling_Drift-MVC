@@ -34,7 +34,7 @@ public class CarController : MonoBehaviour
     {
         CheckDrift();
 
-        carView.scoreText.text = score.ToString();
+        carView.SetScoreText();
 
         if (carView.rope_radius <= minDistance && Input.GetButton("Fire1"))
         {
@@ -50,7 +50,6 @@ public class CarController : MonoBehaviour
 
 
     }
-
 
     public void CheckDrift()
     {

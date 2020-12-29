@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour
         if (carController.score > PlayerPrefs.GetInt("HighScore", 0))
         {
             PlayerPrefs.SetInt("HighScore", carController.score);
-            gameView.highScoreText.text = carController.score.ToString();
+            gameView.SetHighScoreText();
         }
 
         if (start)
@@ -34,19 +34,9 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void Quit()
-    {
-        Application.Quit();
-    }
-
     public void StartGame()
     {
         start = true;
     }
 
-    public void Restart()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
 }

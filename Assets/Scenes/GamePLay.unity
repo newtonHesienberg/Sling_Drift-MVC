@@ -203,7 +203,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1549603240}
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -5766,7 +5766,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1138622531}
+      - m_Target: {fileID: 1549603240}
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -11458,6 +11458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startUI: {fileID: 711254788}
   highScoreText: {fileID: 2086030718}
+  carController: {fileID: 73345774}
 --- !u!1 &1582512507
 GameObject:
   m_ObjectHideFlags: 0

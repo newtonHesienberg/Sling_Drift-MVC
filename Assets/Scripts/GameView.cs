@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameView : MonoBehaviour
 {
     public GameObject startUI;
     public Text highScoreText;
+
+    [Header("Refrences")]
+    public CarController carController;
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +25,24 @@ public class GameView : MonoBehaviour
         
     }
 
+    public void SetHighScoreText()
+    {
+        highScoreText.text = carController.score.ToString();
+    }
+
     public void SetStartUIFalse()
     {
         startUI.SetActive(false);
     }
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 }

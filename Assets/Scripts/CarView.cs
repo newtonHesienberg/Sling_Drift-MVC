@@ -18,6 +18,8 @@ public class CarView : MonoBehaviour
 
     public LineRenderer lineRenderer;
 
+    [Header("Physical Values")]
+
     public GameObject[] nodes;
     public int index = -1;
     public float zAisValue;
@@ -47,6 +49,11 @@ public class CarView : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SetScoreText()
+    {
+        scoreText.text = carController.score.ToString();
     }
 
     public void DriftState()
